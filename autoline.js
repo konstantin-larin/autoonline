@@ -664,9 +664,9 @@ function changeLayout() {
     let playVideoFrame = document.querySelector('.play-video');
     let playVideoImg = document.getElementById('play-video-img');
     let mobileWatch = document.querySelector('.about-us__modile-img-wrapper');
-    if (!isInner) {
-        arrowFromPromoToButton();
-    }
+    // if (!isInner) {
+    //     arrowFromPromoToButton();
+    // }
     if (window.innerWidth <= 900) {
         // HEADER
         document.querySelector('.header__content-subtitle').after(headerImg);
