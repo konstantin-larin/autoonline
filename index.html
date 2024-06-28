@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/autoline.css">
+    <script type="text/javascript" src="../../Desktop/до/IT/Зеленый/Верстальщик/Портфолио/autoline/node_modules/@svgdotjs/svg.js/dist/svg.min.js"></script>
+    <script type="module" src="autoline.js"></script>
+    <title>Autoline</title>
+</head>
+
+<body>
+    <div id="preload-container" class="preload-container">
+        <div id="preload" class="preload" style="display:none">
+            <div id="preload-title" class="logo-title preload__title">
+
+                <span id="preload-title_str1" class="preload__title-str js-clearContent">aut</span><svg id="preload_svg" class="infinity-svg" style="visibility: hidden;" ondragstart="return false" width="109" height="53" viewBox="0 0 109 53" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path id="preload_svg-path" class="infinity-svg__path preload-animation" stroke="#EDEDED"
+                        d="M45.0202 10C38.9289 3.73989 34.0202 1 26.0202 1C17.0202 1 2.5202 5.5 1.02023 25.5C0.520203 37 9.30083 51 26.0202 51C59.0202 51 51.5202 1 83.0202 1C95.0202 1 108.02 10.9199 108.02 25C108.02 35 101.52 50.5 83.0202 51C73.5202 50.5 69.4182 47.9708 63.5202 41.5"/>
+                </svg><span id="preload-title_str2" class="preload__title-str js-clearContent">nline</span>
+            </div>
+            <div id="preload-subtitle" class="logo-subtitle preload__subtitle" >
+                ONLINE DRIVING SCHOOL
+            </div>
+        </div>
+    </div>
+    <div class="navigation-head" id="navigation-head">
+        <img class="navigation-head__logo" src="img/Logo.svg" alt="Logotype">
+    </div>
+    <div class="navigation-container" id="navbar">
+        <nav class="navigation">
+            <a href="#header" class="navigation__link">Главная</a>
+            <a href="#exercises" class="navigation__link">Задания</a>
+            <a href="#about-us" class="navigation__link">О нас</a>
+            <a href="#gain" class="navigation__link">Что ты получишь</a>
+            <a href="#questions" class="navigation__link">Вопросы</a>
+            <a href="#footer" class="navigation__link">Присоединяйтесь!</a>
+        </nav>
+        <button class="navigation__close" id="close-nav">
+            <svg width="47" height="14" viewBox="0 0 47 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 10L23 3L43 10" stroke="white" stroke-width="5" stroke-linecap="square" />
+            </svg>
+        </button>
+    </div>
+    <div class="header-container container" id="header">
+        <header>
+            <div class="header__head">
+                <p class="header__head-promo-title">
+                    <span class="header__head-promo-title-span_highlight">Авторский онлайн-марафон</span>
+                    <br>по&nbsp;ПДД Республики Казахстан
+                </p>
+                <div class="header__head-start-date">
+                    <span class="header__head-start-date-span_highlight"><span class="js-start-date"></span> /
+                        20:00</span>
+                    <br>Начало марафона
+                </div>
+            </div>
+            <div class="header__body">
+                <div class="header__content">
+                    <h1 class="header__content-title">
+                        <span class="header__content-title-span_highlight">изучи ПДД за&nbsp;7&nbsp;дней</span>
+                        <br>По&nbsp;понятным видео-&nbsp;урокам,
+                    </h1>
+                    <h2 class="header__content-subtitle">и получи возможность <span
+                            class="header__content-subtitle-span_highlight">выиграть денежные призы</span></h2>
+                    <div class="header__content-info-container parallelogram blue-neon">
+                        <p class="header__content-info-text">Обучение проходит онлайн в&nbsp;нашем сервисе видео-уроков.
+                        </p>
+                    </div>
+                    <div class="header__content-register register js-arrow-animate" id="header-content-register"
+                        data-buttonareanumber="1">
+                        <button class="register__button ellipse-form js-arrow-animate__button js-open-reg-window"
+                            data-side="right">
+                            <p class="register__button-inner">Участвовать</p>
+                        </button>
+
+                        <p class="register__promo js-arrow-animate__promo" data-side="left">
+                            Участие в марафоне<br>абсолютно
+                            <span class="register__promo-span_highlight">бесплатно</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="header__img-wrapper">
+                    <img src="img/Девушка.png" alt="Девушка" class="header__img">
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- <div class="clouds"></div> -->
+    <div class="exercises-container" id="exercises">
+        <section>
+            <div class="section-head">
+                <h2 class="section-title">Выполняй задания на марафоне</h2>
+                <h3 class="section-subtitle">И получи денежные призы и подарки</h3>
+            </div>
+
+            <ol class="price-list">
+                <li class="price-card">
+                    <div class="price-card__img-wrapper">
+                        <img class="price-card__img" src="img/card-1.png" alt="Macbook Pro 17 and Iphone 13 Pro">
+                    </div>
+                    <p class="price-card__description">
+                        Смотри каждый день видеоуроки на&nbsp;нашем сайте
+                    </p>
+                </li>
+                <li class="price-card">
+                    <div class="price-card__img-wrapper">
+                        <img class="price-card__img" src="img/card-2.png" alt="Тетрадь">
+                    </div>
+                    <p class="price-card__description">
+                        Делай домашние задания и&nbsp;отправляй нам
+                    </p>
+                </li>
+                <li class="price-card">
+                    <div class="price-card__img-wrapper">
+                        <img class="price-card__img" src="img/card-3.png" alt="Подарки">
+                    </div>
+                    <p class="price-card__description">
+                        Самые активные марафонцы получат крупные денежные призы и&nbsp;подарки
+                    </p>
+                </li>
+            </ol>
+        </section>
+    </div>
+    <div class="about-us-container" id="about-us">
+        <section class="about-us">
+            <div class="section-head about-us-head">
+                <h2 class="section-title">Узнай о нас</h2>
+                <h3 class="about-us__subtitle section-subtitle">Немного больше...</h3>
+                <div class="about-us__modile-img-wrapper" style="display: none;">
+                    <img src="img/Sumsung-1.png" alt="video" class="about-us__modile-img">
+                </div>
+            </div>
+            <div class="about-us-body">
+                <div class="about-us-content">
+                    <h4 class="about-us-content__title">
+                        Автошкола "AutoOnline" основана в 2017 году Кайратом и Асылжаном.
+                    </h4>
+                    <p class="about-us-content__paragraph">
+                        Они создали <span class="about-us-content__span_highlighted">первый в Казахстане</span> сервис
+                        для онлайн обучения в автошколе. Это позволило тысячам
+                        Казахстанцев дистанционно изучить ПДД, а затем получить свидетельство автошколы.
+                    </p>
+                    <h4 class="about-us-content__title">
+                        В 2021 году "AutoOnline" становится не просто автошколой,
+                    </h4>
+                    <p class="about-us-content__paragraph">
+                        а <span class="about-us-content__span_highlighted">сервисом для обучения</span> всех курсантов
+                        из других автошкол. За первые 4 месяца 2022 года, более
+                        2000 Казахстанцев прошли обучение по новой программе 3D видео-уроков согласно изменениям ПДД.
+                    </p>
+                    <p class="about-us-content__paragraph">
+                        За весь период работы, нашим сервисом воспользовались <span
+                            class="about-us-content__span_highlighted">более 100 000 человек со всего Казахстана.</span>
+                    </p>
+                </div>
+                <div class="about-us__our-mission ellipse-form blue-neon">
+                    <h4 class="about-us__mission-title">Наша миссия:</h4>
+                    <p class="about-us__mission-description">
+                        Модернизация сферы ПДД РК, создание безопасной среды дорожного движения, и изменение
+                        представления об обучении в автошколе.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="about-us__play-video play-video">
+            <img class="play-video__video" src="img/Macbook-watch.png" alt="Смотри видео" id="play-video-img">
+            <div class="play-video__button-area js-arrow-animate" id="play-video" data-buttonareanumber="2">
+                <p class="play-video__promo js-arrow-animate__promo" data-side="right">Смотри видео
+                    <br>об&nbsp;"AutoOnline"
+                </p>
+                <div class="play-video__button-wrapper">
+                    <div class="play-video__button-border js-play-video__button-border_current"></div>
+                    <button class="play-video__button js-arrow-animate__button" data-side="left"
+                        id="play-video__button">
+                        <img class="play-video__button-icon" src="img/Polygon%204.svg" alt="кнопка">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gain-container " id="gain">
+        <div class="gain__decor-title">
+            <p style="text-align: left;">Что ты</p>
+            <p style="text-align: right;">Получишь</p>
+        </div>
+        <section class="gain">
+            <div class="section-head gain__head">
+                <h2 class="section-title">Что ты получишь</h2>
+                <h3 class="section-subtitle">после марафона</h3>
+            </div>
+            <div class="gain__body">
+                <p class="gain__list-introduction">
+                    По&nbsp;завершению марафона вы будете допущены на&nbsp;сдачу экзаменов на&nbsp;управление
+                    транспортных средств:
+                </p>
+                <ul class="gain__category-list">
+                    <li class="gain__category-card_A gain__category-card">
+                        <h4 class="gain__card-title">Категории А-А1</h4>
+                        <ul class="gain__category-advantages-list">
+                            <li class="gain__category-advantage">- Управление мотоциклами.</li>
+                            <li class="gain__category-advantage">- Категория А1 позволяет управлять мотоциклами с
+                                мощностью двигателя не прывышающую 125 куб, см, и макс. мощность не более 11 КвТ. </li>
+                            <li class="gain__category-advantage">
+                                - Обладатели категории А автоматически получают категорию А1
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gain__category-card_B gain__category-card">
+                        <h4 class="gain__card-title">Категории B-B1</h4>
+                        <ul class="gain__category-advantages-list">
+                            <li class="gain__category-advantage">- Управление легковыми автомобилями, трициклами,
+                                квадроциклами.</li>
+                            <li class="gain__category-advantage">- Категория B дает возможность управлять легковым
+                                автомобилем, небольшими грузовиками, микроавтобусами, соответствующие некоторым
+                                требованиям.</li>
+                            <li class="gain__category-advantage">
+                                - Обладатели категории B автоматически получают категорию B1
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div class="questions-container container" id="questions">
+        <section class="questions">
+            <div class="section-head questions__head">
+                <h2 class="section-title">Остались вопросы?</h2>
+                <h3 class="questions__subtitle section-subtitle">здесь ты найдешь ответы</h3>
+            </div>
+            <ul class="questions__questions-list" id="questions-list">
+                <li class="questions__questions-list-item">
+                    <div class="questions__question">А Кто может быть участником марафона?
+                        <div class="questions__question-icon-wrapper">
+                            <img class="questions__question-icon" src="img/question-icon.svg" alt="иконка">
+                        </div>
+                    </div>
+                    <div class="questions__answer-wrapper" data-answernumber="1" data-opened="0">
+                        <p class="questions__answer">Участником марафона может быть любой гражданин РК достигший 16 лет.
+                        </p>
+                    </div>
+                </li>
+                <li class="questions__questions-list-item">
+                    <div class="questions__question">Сколько всего длится марафон?
+                        <div class="questions__question-icon-wrapper">
+                            <img class="questions__question-icon" src="img/question-icon.svg" alt="иконка">
+                        </div>
+                    </div>
+                    <div class="questions__answer-wrapper" data-answernumber="2" data-opened="0">
+                        <p class="questions__answer">Марафон длится одну неделю.</p>
+                    </div>
+                </li>
+                <li class="questions__questions-list-item">
+                    <div class="questions__question">Сколько стоит участие в марафоне?
+                        <div class="questions__question-icon-wrapper">
+                            <img class="questions__question-icon" src="img/question-icon.svg" alt="иконка">
+                        </div>
+                    </div>
+                    <div class="questions__answer-wrapper" data-answernumber="3" data-opened="0">
+                        <p class="questions__answer">Участие в марафоне абсолютно бесплатно!</p>
+                    </div>
+                </li>
+                <li class="questions__questions-list-item">
+                    <div class="questions__question">Что я получу от марафона?
+                        <div class="questions__question-icon-wrapper">
+                            <img class="questions__question-icon" src="img/question-icon.svg" alt="иконка">
+                        </div>
+                    </div>
+                    <div class="questions__answer-wrapper" data-answernumber="4" data-opened="0">
+                        <p class="questions__answer">По завершению марафона ты будешь допущен на сдачу экзаменов на
+                            управление транспортных средств: категории А-А1 и категории B-B1.</p>
+                    </div>
+                </li>
+                <li class="questions__questions-list-item">
+                    <div class="questions__question">Как будет проводится марафон?
+                        <div class="questions__question-icon-wrapper">
+                            <img class="questions__question-icon" src="img/question-icon.svg" alt="иконка">
+                        </div>
+                    </div>
+                    <div class="questions__answer-wrapper" data-answernumber="5" data-opened="0">
+                        <p class="questions__answer">Обучение проходит онлайн в нашем сервисе видео-уроков.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="clouds"></div>
+    <div class="footer-container container" id="footer">
+        <footer class="footer">
+            <div class="section-head footer__head">
+                <h2 class="section-title">Уже решили присоединиться?</h2>
+                <h3 class="footer__subtitle section-subtitle">жми кнопку и регистрируйся на марафон</h3>
+            </div>
+            <div class="footer__body">
+                <div class="start-date">
+                    <p class="start-date__promo">Дата начала марафона <span class="start-date__promo_highlight"><span
+                                class="js-start-date">
+
+                            </span> /
+                            20:00, </span>осталось:</p>
+                    <div class="start-date__table">
+                        <span class="start-date__clock-digit" id="hours"></span>
+                        <span class="start-date__clock-digit">:</span>
+                        <span class="start-date__clock-digit" id="minutes"></span>
+                        <span class="start-date__clock-digit">:</span>
+                        <span class="start-date__clock-digit" id="seconds"></span>
+                        <span class="start-date__clock-span start-date__clock-span_hours" id="hours-span">часов</span>
+                        <span class="start-date__clock-span start-date__clock-span_minutes"
+                            id="minutes-span">минут</span>
+                        <span class="start-date__clock-span start-date__clock-span_seconds"
+                            id="seconds-span">секунд</span>
+                    </div>
+                </div>
+                <div class="footer__button-area">
+                    <a class="footer__inst-link" href="https://vk.com/konstantin_larin_33">
+                        <img class="footer__inst-icon" src="img/inst.svg" alt="instagram">
+                    </a>
+
+                    <div class="footer__register register js-arrow-animate" id="footer-register"
+                        data-buttonareanumber="3">
+                        <button class="register__button ellipse-form js-arrow-animate__button js-open-reg-window"
+                            data-side="right">
+                            <p class="register__button-inner">Участвовать</p>
+                        </button>
+
+                        <p class="footer__register-promo register__promo js-arrow-animate__promo" data-side="left">
+                            Участие в марафоне<br>абсолютно
+                            <span class="register__promo-span_highlight">бесплатно</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__end">
+                <img class="footer__logo" src="img/footer-logo.svg" alt="logo">
+                <p class="footer__p-s">Made with <img class="footer__p-s-heart" src="img/heart.svg" alt="Сердечко"> by
+                    AutoOnline <br>© Konstantin Larin</p>
+                <p class="footer__privacy-policy">
+                    Все права защищены <br>
+                    <a class="footer__privacy-policy-link">Политика конфендициальности</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="registration-window registration-window_dark-theme" id="registration-window" style="display: none;">
+        <div class="registration__close js-close-reg-window">
+            <img src="img/question-icon.svg" alt="">
+        </div>
+        <div class="registration-container">
+            <div class="registration" id="registration">
+                <div class="registration__head">
+                    <h2 class="registration-title">Регистрация на марафон</h2>
+                    <h3 class="registration-subtitle">Дата начала марафона
+                        <span class="registration__text-highlight"><span class="js-start-date"></span> / 20:00</span>
+                    </h3>
+                </div>
+                <p class="registration-content">
+                    Укажи свои данные в полях ниже и получи доступ к <span
+                        class="registration__text-highlight">бесплатному
+                        7-ми дневному</span> марафону от Autoonline
+                </p>
+                <form action="" class="registration__form" onsubmit="return false" id="registration-form">
+                    <fieldset class="registration__input-area">
+                        <div class="registration__input-row">
+                            <label for="name-input" class="registration__input-label">Ваше имя</label>
+                            <input type="text" class="registration__input" placeholder="Введите ваше имя..."
+                                id="name-input" required>
+                        </div>
+                        <div class="registration__input-row">
+                            <label for="city-input" class="registration__input-label">Откуда вы</label>
+                            <input type="text" class="registration__input" placeholder="Введите город..."
+                                id="city-input" required>
+                        </div>
+                        <div class="registration__input-row">
+                            <label for="tel-input" class="registration__input-label">Ваш телефон</label>
+                            <input type="tel" class="registration__input" placeholder="+7 ..." id="tel-input" required>
+                        </div>
+                        <div class="registration__input-row">
+                            <label for="mail-input" class="registration__input-label">Ваш e-mail</label>
+                            <input type="text" class="registration__input" placeholder="email@mail.com" id="mail-input"
+                                required>
+                        </div>
+                        <button class="registration__button register__button ellipse-form" type="submit">
+                            <p class="register__button-inner">Зарегистрироваться</p>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="registration-notification" id="registration-notification" style="display: none;">
+                <h2 class="registration-title">Поздравляем!</h2>
+                <h3 class="registration-subtitle">Теперь вы на шаг ближе к получению <span class="registration__text-highlight">водительских прав.</span></h3>
+                <p class="registration-content">
+                    Перед началом марафона мы вышлем всю нужную информацию на&nbsp;<span class="registration__text-highlight">вашу почту</span>. <br>
+                    Будем на связи!
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
