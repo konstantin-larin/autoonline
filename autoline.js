@@ -1,3 +1,5 @@
+import { SVG } from './node_modules/@svgdotjs/svg.js/dist/svg.esm.js';
+
 // PRELOAD
 let preloadCounter = 0;
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
@@ -107,170 +109,170 @@ document.addEventListener('DOMContentLoaded', measuringmetrics);
 
 
 // ARROW
-// window.addEventListener('load', arrowFromPromoToButton);
+window.addEventListener('load', arrowFromPromoToButton);
 let fields = [];
 let controlPointsTop = [];
 let controlPointsBottom = [];
-// function arrowFromPromoToButton() {
-//     let areas = document.querySelectorAll('.js-arrow-animate');
-//     for (let field of areas) {
-//         let controlPointTop = window.pageYOffset + field.getBoundingClientRect().top;
-//         let controlPointBottom = window.pageYOffset + field.getBoundingClientRect().bottom;
-//         fields.push(field);
-//         controlPointsTop.push(controlPointTop);
-//         controlPointsBottom.push(controlPointBottom);
-//     }
-//     function drawArrow(field, idNumber) {
-//         let left = field.querySelector('[data-side="left"]');
-//         let right = field.querySelector('[data-side="right"]');
-//         let end;
-//         let arrowBottom; let arrowTop;
-//         if (window.innerWidth < 900 && field.id != 'play-video') {
-//             end = right.getBoundingClientRect().left;
-//             arrowBottom = left.getBoundingClientRect().top;
-//             arrowTop = right.getBoundingClientRect().bottom;
-//         }
-//         end = right.getBoundingClientRect().right;
-//         let start = left.getBoundingClientRect().left;
+function arrowFromPromoToButton() {
+    let areas = document.querySelectorAll('.js-arrow-animate');
+    for (let field of areas) {
+        let controlPointTop = window.pageYOffset + field.getBoundingClientRect().top;
+        let controlPointBottom = window.pageYOffset + field.getBoundingClientRect().bottom;
+        fields.push(field);
+        controlPointsTop.push(controlPointTop);
+        controlPointsBottom.push(controlPointBottom);
+    }
+    function drawArrow(field, idNumber) {
+        let left = field.querySelector('[data-side="left"]');
+        let right = field.querySelector('[data-side="right"]');
+        let end;
+        let arrowBottom; let arrowTop;
+        if (window.innerWidth < 900 && field.id != 'play-video') {
+            end = right.getBoundingClientRect().left;
+            arrowBottom = left.getBoundingClientRect().top;
+            arrowTop = right.getBoundingClientRect().bottom;
+        }
+        end = right.getBoundingClientRect().right;
+        let start = left.getBoundingClientRect().left;
 
-//         let width;
-//         let height;
-//         if (window.innerWidth < 900 && field.id != 'play-video') {
-//             height = arrowBottom - arrowTop + 30;
-//             width = height * 1.3;
-//         }
-//         else if (window.innerWidth > 900 && field.id !== 'play-video') {
-//             width = (start - end) + 50;
-//             height = width * 0.25;
-//         }
-//         else {
-//             width = (start - end);
-//             height = width * 0.25;
-//         }
+        let width;
+        let height;
+        if (window.innerWidth < 900 && field.id != 'play-video') {
+            height = arrowBottom - arrowTop + 30;
+            width = height * 1.3;
+        }
+        else if (window.innerWidth > 900 && field.id !== 'play-video') {
+            width = (start - end) + 50;
+            height = width * 0.25;
+        }
+        else {
+            width = (start - end);
+            height = width * 0.25;
+        }
 
-//         let container = document.createElement('div');
-//         container.classList.add('js-arrow-svg-container');
-//         container.style.position = 'absolute';
+        let container = document.createElement('div');
+        container.classList.add('js-arrow-svg-container');
+        container.style.position = 'absolute';
 
-//         container.style.height = height + 'px';
-//         container.style.width = width + 'px';
-//         if (window.innerWidth < 900 && field.id != 'play-video') {
-//             if (window.innerWidth > 700) {
-//                 container.style.left = window.innerWidth * 0.1 - 10 + 'px';
-//             }
-//             else {
-//                 container.style.left = window.innerWidth * 0.064 - 10 + 'px';
-//             }
-//             container.style.top = right.offsetHeight + 10 + 'px';
-//         }
-//         else {
-//             container.style.left = right.offsetWidth + 'px';
-//             container.style.bottom = -height + 'px';
-//         }
+        container.style.height = height + 'px';
+        container.style.width = width + 'px';
+        if (window.innerWidth < 900 && field.id != 'play-video') {
+            if (window.innerWidth > 700) {
+                container.style.left = window.innerWidth * 0.1 - 10 + 'px';
+            }
+            else {
+                container.style.left = window.innerWidth * 0.064 - 10 + 'px';
+            }
+            container.style.top = right.offsetHeight + 10 + 'px';
+        }
+        else {
+            container.style.left = right.offsetWidth + 'px';
+            container.style.bottom = -height + 'px';
+        }
 
-//         // for special field
-//         let addWrapper;
-//         if (field.id == 'play-video' && window.innerWidth > 900) {
-//             container.style.width = width * 0.6 + 'px';
-//             container.style.left = right.offsetWidth + width * 0.4 + 'px';
-//             container.style.transformOrigin = 'top left';
-//             container.style.transform = `rotate(-20deg)`;
-//             addWrapper = container.cloneNode(true);
-//             addWrapper.style.left = 0;
-//             addWrapper.style.top = 0;
-//             addWrapper.style.right = 0;
-//             addWrapper.style.bottom = 0;
-//             addWrapper.style.transformOrigin = 'center';
-//             addWrapper.style.transform = `scaleX(-1)`;
-//             container.append(addWrapper);
-//         }
-//         else if (field.id == 'play-video' && window.innerWidth < 900) {
-//             width = 2 * width;
-//             height = width * 0.3;
-//             container.style.width = width + 'px';
-//             container.style.bottom = -height * 1.25 + 'px';
-//             container.style.left = right.offsetWidth - width * 0.5 + 'px';
-//             container.style.transform = `scaleX(-1)`;
-//         }
-//         field.append(container);
+        // for special field
+        let addWrapper;
+        if (field.id == 'play-video' && window.innerWidth > 900) {
+            container.style.width = width * 0.6 + 'px';
+            container.style.left = right.offsetWidth + width * 0.4 + 'px';
+            container.style.transformOrigin = 'top left';
+            container.style.transform = `rotate(-20deg)`;
+            addWrapper = container.cloneNode(true);
+            addWrapper.style.left = 0;
+            addWrapper.style.top = 0;
+            addWrapper.style.right = 0;
+            addWrapper.style.bottom = 0;
+            addWrapper.style.transformOrigin = 'center';
+            addWrapper.style.transform = `scaleX(-1)`;
+            container.append(addWrapper);
+        }
+        else if (field.id == 'play-video' && window.innerWidth < 900) {
+            width = 2 * width;
+            height = width * 0.3;
+            container.style.width = width + 'px';
+            container.style.bottom = -height * 1.25 + 'px';
+            container.style.left = right.offsetWidth - width * 0.5 + 'px';
+            container.style.transform = `scaleX(-1)`;
+        }
+        field.append(container);
 
-//         let draw;
-//         // if (field.id == 'play-video' && window.innerWidth > 900) {
-//         //     draw = new SVG().addTo(addWrapper).size(width, height);
-//         // }
-//         // else {
-//         //     draw = SVG().addTo(container).size(width, height);
-//         // }
-
-
-//         draw.attr('overflow', 'visible');
-//         draw.fill('transparent');
-//         let group = draw.group();
-//         let arrow;
-//         let line;
+        let draw;
+        if (field.id == 'play-video' && window.innerWidth > 900) {
+            draw = new SVG().addTo(addWrapper).size(width, height);
+        }
+        else {
+            draw = SVG().addTo(container).size(width, height);
+        }
 
 
-//         if (window.innerWidth < 900 && field.id !== 'play-video') {
-//             arrow = group.path('M0, 0 L10, -3 L0, 0 L0, 10').fill('none');
-//             line = group.path(`M${width * 0.99} ${height * 0.7} C37 60 10 26 ${width * 0.4} 1`);
-//         }
-//         else {
-//             arrow = group.path('M0, 0 L10, -3 L0, 0 L0, 10').fill('none');
-//             line = group.path(`M${width} 1 C${width * 0.66} ${height} ${width * 0.33} ${height} 1 1`);
-//         }
-//         line.attr('id', `arrow-way-${idNumber}`);
-//         arrow.attr('id', `arrow-${idNumber}`);
-//         arrow.attr('stroke-linecap', `round`);
-//         arrow.attr('stroke-width', '1.5px');
-//         line.attr('stroke-dashoffset', line.length());
-//         line.attr('stroke-dasharray', line.length());
+        draw.attr('overflow', 'visible');
+        draw.fill('transparent');
+        let group = draw.group();
+        let arrow;
+        let line;
 
-//         let animateMotion = document.createElementNS('http://www.w3.org/2000/svg', 'animateMotion');
-//         animateMotion.setAttribute("dur", "0.7s");
-//         animateMotion.setAttribute("repeatCount", "1");
-//         animateMotion.setAttribute('begin', '0.5s');
-//         animateMotion.setAttribute('fill', 'freeze');
-//         let mpath = document.createElementNS('http://www.w3.org/2000/svg', 'mpath');
-//         mpath.setAttributeNS("http://www.w3.org/1999/xlink", "href", `#arrow-way-${idNumber}`);
-//         animateMotion.append(mpath);
-//         document.getElementById(`arrow-${idNumber}`).append(animateMotion);
 
-//         setTimeout(() => {
-//             if (window.innerWidth < 900 && field.id !== 'play-video') {
-//                 setTimeout(() => {
-//                     arrow.attr('class', 'js-arrow__arrow-path_mobile');
-//                 }, 300);
-//             }
-//             else {
-//                 arrow.attr('class', 'js-arrow__arrow-path');
-//             }
-//             line.attr('class', 'js-arrow__line-path');
-//             line.stroke('white');
-//             arrow.stroke('white');
-//         }, 500);
-//     }
-//     window.addEventListener('scroll', arrowReaction);
-//     function arrowReaction() {
-//         for (let i = 0; i < controlPointsTop.length; i++) {
-//             if (controlPointsBottom[i] < window.innerHeight) {
-//                 if (window.pageYOffset < controlPointsBottom[i] - 30) {
-//                     drawArrow(fields[i], fields[i].dataset.buttonareanumber);
-//                     fields.splice(i, 1);
-//                     controlPointsTop.splice(i, 1);
-//                     controlPointsBottom.splice(i, 1);
-//                 }
-//             }
-//             else {
-//                 if (window.pageYOffset < controlPointsBottom[i] && window.pageYOffset + window.innerHeight > controlPointsTop[i]) {
-//                     drawArrow(fields[i], fields[i].dataset.buttonareanumber);
-//                     fields.splice(i, 1);
-//                     controlPointsTop.splice(i, 1);
-//                     controlPointsBottom.splice(i, 1);
-//                 }
-//             }
-//         }
-//     }
-// }
+        if (window.innerWidth < 900 && field.id !== 'play-video') {
+            arrow = group.path('M0, 0 L10, -3 L0, 0 L0, 10').fill('none');
+            line = group.path(`M${width * 0.99} ${height * 0.7} C37 60 10 26 ${width * 0.4} 1`);
+        }
+        else {
+            arrow = group.path('M0, 0 L10, -3 L0, 0 L0, 10').fill('none');
+            line = group.path(`M${width} 1 C${width * 0.66} ${height} ${width * 0.33} ${height} 1 1`);
+        }
+        line.attr('id', `arrow-way-${idNumber}`);
+        arrow.attr('id', `arrow-${idNumber}`);
+        arrow.attr('stroke-linecap', `round`);
+        arrow.attr('stroke-width', '1.5px');
+        line.attr('stroke-dashoffset', line.length());
+        line.attr('stroke-dasharray', line.length());
+
+        let animateMotion = document.createElementNS('http://www.w3.org/2000/svg', 'animateMotion');
+        animateMotion.setAttribute("dur", "0.7s");
+        animateMotion.setAttribute("repeatCount", "1");
+        animateMotion.setAttribute('begin', '0.5s');
+        animateMotion.setAttribute('fill', 'freeze');
+        let mpath = document.createElementNS('http://www.w3.org/2000/svg', 'mpath');
+        mpath.setAttributeNS("http://www.w3.org/1999/xlink", "href", `#arrow-way-${idNumber}`);
+        animateMotion.append(mpath);
+        document.getElementById(`arrow-${idNumber}`).append(animateMotion);
+
+        setTimeout(() => {
+            if (window.innerWidth < 900 && field.id !== 'play-video') {
+                setTimeout(() => {
+                    arrow.attr('class', 'js-arrow__arrow-path_mobile');
+                }, 300);
+            }
+            else {
+                arrow.attr('class', 'js-arrow__arrow-path');
+            }
+            line.attr('class', 'js-arrow__line-path');
+            line.stroke('white');
+            arrow.stroke('white');
+        }, 500);
+    }
+    window.addEventListener('scroll', arrowReaction);
+    function arrowReaction() {
+        for (let i = 0; i < controlPointsTop.length; i++) {
+            if (controlPointsBottom[i] < window.innerHeight) {
+                if (window.pageYOffset < controlPointsBottom[i] - 30) {
+                    drawArrow(fields[i], fields[i].dataset.buttonareanumber);
+                    fields.splice(i, 1);
+                    controlPointsTop.splice(i, 1);
+                    controlPointsBottom.splice(i, 1);
+                }
+            }
+            else {
+                if (window.pageYOffset < controlPointsBottom[i] && window.pageYOffset + window.innerHeight > controlPointsTop[i]) {
+                    drawArrow(fields[i], fields[i].dataset.buttonareanumber);
+                    fields.splice(i, 1);
+                    controlPointsTop.splice(i, 1);
+                    controlPointsBottom.splice(i, 1);
+                }
+            }
+        }
+    }
+}
 // NAVIGATION
 function navEvents() {
     let navbar = document.getElementById('navbar');
