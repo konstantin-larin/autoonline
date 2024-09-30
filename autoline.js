@@ -1,4 +1,4 @@
-import { SVG } from './node_modules/@svgdotjs/svg.js/dist/svg.esm.js';
+import { SVG } from 'https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.1.1/dist/svg.esm.js';
 
 // PRELOAD
 let preloadCounter = 0;
